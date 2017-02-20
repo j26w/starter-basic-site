@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta property="og:image" content="">
+<meta name=description content=""/>
+<title>YellowDog | Orlando FL Web Design, Branding, Marketing</title>
+
+<!--BEGIN include in-line crtical css (get sass and process into css)-->
+{% capture critical %}{% include critical.css %}{% endcapture %}
+<style>
+@charset "UTF-8";
+{{ critical | scssify }}
+</style>
+<!--END include in-line crtical css (get sass and process into css)-->
+
+<!--BEGIN asynchronous load of non-critical css-->
+<link rel="stylesheet" href="/css/styles.css">
+<!--END asynchronous load of non-critical css-->
+
+<!--BEGIN set a cookie so we can automatically apply the fonts-loaded class to the html element on repeat visits-->
+<script>
+	// cookie script by filament group
+	function cookie(e,i,o){if(void 0===i){var t="; "+window.document.cookie,n=t.split("; "+e+"=");return 2===n.length?n.pop().split(";").shift():null}i===!1&&(o=-1);var r;if(o){var c=new Date;c.setTime(c.getTime()+24*o*60*60*1e3),r="; expires="+c.toGMTString()}else r="";window.document.cookie=e+"="+i+r+"; path=/"}
+ 	// set cookie so web fonts can be applied immediately
+	cookie( "fonts-loaded", true, 7 );
+	// check if cookie exists and if so go ahead and apply the fonts-loaded class to html. would be better to check for cookie with php or SSI expr
+	// and use an if/then to write alternative html tags, one with the class and one without. this javascript option is for static sites like github-pages
+	if ( document.cookie.match(/^(.*;)?fonts-loaded=[^;]+(.*)?$/) ) {document.documentElement.className += ' fonts-loaded';}
+</script> 
+<!--END set a cookie so we can automatically apply the fonts-loaded class to the html element on repeat visits-->
