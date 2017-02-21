@@ -81,17 +81,10 @@
 				<p>The images in the following list utilize deferred loading so they don't prevent the page from loading while they download. The script is located right before the end body tag.</p>
 				<ul>
 					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/3000x2000" alt="Image description"></li>
+							 data-src="http://unsplash.it/1000x500" alt="Image description"></li>
 					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/3500x2333" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/2000x1333" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/3200x2133" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/2800x1866" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/2900x1933" alt="Image description"></li>	
+							 data-src="http://unsplash.it/900x450" alt="Image description"></li>
+
 
 				</ul>
 			</article>
@@ -101,17 +94,8 @@
 				<p>The aside content should be related to the surrounding content.</p>
 				<ul>
 					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/1500x1000" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/1750x1150" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/1000x652" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/1600x1000" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/1400x900" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/1459x900" alt="Image description"></li>	
+							 data-src="http://unsplash.it/600x300" alt="Image description"></li>
+					
 
 				</ul>
 			</aside>
@@ -127,43 +111,18 @@
 	</div>
 
 </div>
-
-
 	<script type="text/javascript">
-		/*
-		defer loading images
-		*/
-		function init() {
-		var imgDefer = document.getElementsByTagName('img');
-		for (var i=0; i<imgDefer.length; i++) {
-		if(imgDefer[i].getAttribute('data-src')) {
-		imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-		} } }
-		window.onload = init;
-		/*
-		Asynchronously load scripts.js
-		*/
-		function downloadJSAtOnload() {
-		var element = document.createElement("script");
-		element.src = "/assets/scripts-db861f0b2face893a053de2c78c1879289e417e323cc75af2d1b56fb64c77458.js";
-		document.body.appendChild(element);
-		}
-		if (window.addEventListener)
-		window.addEventListener("load", downloadJSAtOnload, false);
-		else if (window.attachEvent)
-		window.attachEvent("onload", downloadJSAtOnload);
-		else window.onload = downloadJSAtOnload;
-		/*
-		Include cookie v0.1.3 - set a cookie so we can automatically apply the fonts-loaded class to the html element on repeat visits
-		*/
-		/*! cookie function v0.1.3. get, set, or forget a cookie. [c]2014 @scottjehl, Filament Group, Inc. Licensed MIT */
+	/*
+	Include cookie v0.1.3 - needed so we can set a cookie needed to apply the fonts-loaded class to the html element immediately on repeat visits
+	*/
+	/*! cookie function v0.1.3. get, set, or forget a cookie. [c]2014 @scottjehl, Filament Group, Inc. Licensed MIT */
 
 !function(e){var o=function(o,t,i){if(void 0===t){var n="; "+e.document.cookie,l=n.split("; "+o+"=");return 2===l.length?l.pop().split(";").shift():null}t===!1&&(i=-1);var u="";if(i){var d=new Date;d.setTime(d.getTime()+24*i*60*60*1e3),u="; expires="+d.toGMTString()}e.document.cookie=o+"="+t+u+"; path=/"};"undefined"!=typeof module?module.exports=o:e.cookie=o}("undefined"!=typeof global?global:this);
 
-		/*
-		Include FontFaceObserver
-		*/
-		/* fontfaceobserver Copyright (c) 2014 - Bram Stein https://github.com/bramstein/fontfaceobserver/*/
+	/*
+	Include FontFaceObserver
+	*/
+	/* fontfaceobserver Copyright (c) 2014 - Bram Stein https://github.com/bramstein/fontfaceobserver/*/
 
 		(function(){'use strict';function f(a){this.a=k;this.b=void 0;this.d=[];var b=this;try{a(function(a){l(b,a)},function(a){m(b,a)})}catch(c){m(b,c)}}var k=2;function n(a){return new f(function(b,c){c(a)})}function p(a){return new f(function(b){b(a)})}
 		function l(a,b){if(a.a===k){if(b===a)throw new TypeError("Promise resolved with itself.");var c=!1;try{var d=b&&b.then;if(null!==b&&"object"===typeof b&&"function"===typeof d){d.call(b,function(b){c||l(a,b);c=!0},function(b){c||m(a,b);c=!0});return}}catch(e){c||m(a,e);return}a.a=0;a.b=b;q(a)}}function m(a,b){if(a.a===k){if(b===a)throw new TypeError("Promise rejected with itself.");a.a=1;a.b=b;q(a)}}
@@ -178,37 +137,65 @@
 		a(h))}}setTimeout(function(){w();y(h)},3E3);t(k,function(a){f=a;x()});r(k,h.family+",sans-serif",b);t(l,function(a){d=a;x()});r(l,h.family+",serif",b);t(m,function(a){g=a;x()});r(m,h.family+",monospace",b)})};window.FontFaceObserver=u;window.FontFaceObserver.prototype.check=u.prototype.a;}());
 		
 
-		/*
-		Fonts are loaded through @font-face rules in the CSS whenever an element references them.
-		FontFaceObserver creates a referencing element to trigger the font request, and lsisten for font load events.
-		When all 3 fonts are loaded, we enable them by adding a class to the html element
-		*/
-		(function( w ){
-			// if the class is already set, we're good.
-			if( w.document.documentElement.className.indexOf( "fonts-loaded" ) > -1 ){
-				return;
-			}
-			var fontA = new w.FontFaceObserver( "Source Sans Pro", {
-				weight: 300
-			});
+	/*
+	Include javascript
+	*/
+	/*
+	defer loading images
+	*/
+	function init() {
+	var imgDefer = document.getElementsByTagName('img');
+	for (var i=0; i<imgDefer.length; i++) {
+	if(imgDefer[i].getAttribute('data-src')) {
+	imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+	} } }
+	window.onload = init;
+	/*
+	Asynchronously load scripts.js
+	*/
+	function downloadJSAtOnload() {
+	var element = document.createElement("script");
+	element.src = "/assets/scripts-db861f0b2face893a053de2c78c1879289e417e323cc75af2d1b56fb64c77458.js";
+	document.body.appendChild(element);
+	}
+	if (window.addEventListener)
+	window.addEventListener("load", downloadJSAtOnload, false);
+	else if (window.attachEvent)
+	window.attachEvent("onload", downloadJSAtOnload);
+	else window.onload = downloadJSAtOnload;
 
-			var fontB = new w.FontFaceObserver( "Source Sans Pro", {
-				weight: 600
-			});
+	/*
+	Fonts are loaded through @font-face rules in the CSS whenever an element references them.
+	FontFaceObserver creates a referencing element to trigger the font request, and lsisten for font load events.
+	When all 3 fonts are loaded, we enable them by adding a class to the html element
+	*/
+	(function( w ){
+		// if the class is already set, we're good.
+		if( w.document.documentElement.className.indexOf( "fonts-loaded" ) > -1 ){
+			return;
+		}
+		var fontA = new w.FontFaceObserver( "Source Sans Pro", {
+			weight: 300
+		});
 
-			var fontC = new w.FontFaceObserver( "Source Sans Pro", {
-				weight: 300,
-				style: "italic"
-			});
+		var fontB = new w.FontFaceObserver( "Source Sans Pro", {
+			weight: 600
+		});
 
-			w.Promise
-				.all([fontA.check(), fontB.check(), fontC.check()])
-				.then(function(){
-					w.document.documentElement.className += " fonts-loaded";
-					// set cookie so web fonts can be applied immediately
-					cookie( "fonts-loaded", true, 7 );
-				});
-		}( this ));
+		var fontC = new w.FontFaceObserver( "Source Sans Pro", {
+			weight: 300,
+			style: "italic"
+		});
+
+		w.Promise
+			.all([fontA.check(), fontB.check(), fontC.check()])
+			.then(function(){
+				// apply the fonts-loaded class to the html element
+				w.document.documentElement.className += " fonts-loaded";
+				// set a cookie so web fonts can be applied immediately on subsequent visits
+				cookie( "fonts-loaded", true, 7 );
+			});
+	}( this ));
 	</script>
 <!--
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
