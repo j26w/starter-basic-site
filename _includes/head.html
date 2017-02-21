@@ -23,11 +23,7 @@
 </script>
 <noscript><link href="{% asset_path noncritical.css %}" rel="preload" as="style"></noscript>
 
-<!--cookie v0.1.3 - set a cookie so we can automatically apply the fonts-loaded class to the html element on repeat visits-->
 <script>
-	{% asset_source vendor/cookie.js %}
-	// set cookie so web fonts can be applied immediately
-	cookie( "fonts-loaded", true, 7 );
 	// check if cookie exists and if so go ahead and apply the fonts-loaded class to html. would be better to check for cookie with php or SSI expr
 	// and use an if/then to write alternative html tags, one with the class and one without. this javascript option is for static sites like github-pages
 	if ( document.cookie.match(/^(.*;)?fonts-loaded=[^;]+(.*)?$/) ) {document.documentElement.className += ' fonts-loaded';}
