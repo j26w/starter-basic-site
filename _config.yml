@@ -20,10 +20,40 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
-gems:
-  - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# Sass/SCSS
 sass:
-  style: compressed
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Outputting
+permalink: /:categories/:title/
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
+# timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# Plugins
+gems:
+  - jekyll-assets
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Jekyll Assets
+# - https://jekyll.github.io/jekyll-assets/
+assets:
+  sources:
+    - _assets/css
+    - _assets/js
+  autoprefixer:
+    browsers: ["last 2 versions","> 5%","IE 9"]

@@ -1,21 +1,90 @@
+
 /*===============================================
 /* Imports
 ===============================================*/
 @import "fonts";
 @import "normalize";
 @import "variables";
+@import "susy";
 
 /*===============================================
 /* Grid System
 ===============================================*/
+/* Changing Susy default global settings */
+$susy: (
+  /* Tells Susy to use 12 columns */
+  columns: 12,
+  /* Tells Susy that the container has a max-width of 1120px */
+  container: $page-container-maxwidth,
+  /* Tells Susy to use border-box */
+  global-box-sizing: border-box 
+  );
 
+/* Makes border-box properties */
+@include border-box-sizing;
+
+.yd-grid-width-1 {@include span(1);}
+.yd-grid-width-2 {@include span(2);}
+.yd-grid-width-3 {@include span(3);}
+.yd-grid-width-4 {@include span(4);}
+.yd-grid-width-5 {@include span(5);}
+.yd-grid-width-6 {@include span(6);}
+.yd-grid-width-7 {@include span(7);}
+.yd-grid-width-8 {@include span(8);}
+.yd-grid-width-9 {@include span(9);}
+.yd-grid-width-10 {@include span(10);}
+.yd-grid-width-11 {@include span(11);}
+.yd-grid-width-12 {@include span(12);}
+
+.yd-container {
+  @include container;
+}
+/* Tells Susy there's 8 columns in the content */
+.yd-content {
+  /* Styles for mobile view go here */ 
+
+  /* Styles for desktop view go here */
+  @media (min-width: $breakpoint-large) {
+    @include span(8); 
+  }
+}
+
+/* Tells Susy there's 4 columns in the sidebar, and its the last item on the row. */
+.yd-sidebar {
+  /* Styles for mobile view go here */ 
+
+  /* Styles for desktop view go here */
+  @media (min-width: $breakpoint-large) {
+    @include span(4 last); 
+  }
+}
+footer {
+	@include span(12);
+}
 /*===============================================
 /* Typography Basics
 ===============================================*/
-html {font-size: $base-font-size;line-height: $base-body-line-height serif;color: $base-body-color;box-sizing: border-box;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
-*, *:before, *:after {box-sizing: inherit}
-body {font-family: serif;font-size:$base-body-font-size;background-color: $base-body-background;padding: 0;margin: 0;}
-.fonts-loaded body {font-family: $base-body-font-family;}
+html {
+	font-size: $base-font-size;
+	line-height: $base-body-line-height;
+	color: $base-body-color;
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+*, *:before, *:after {
+	box-sizing: inherit
+}
+body {
+	font-family: serif;
+	font-size:$base-body-font-size;
+	background-color: $base-body-background;
+	padding: 0;
+	margin: 0;
+}
+.fonts-loaded body {
+	font-family: $base-body-font-family;
+}
 @media(min-width:$breakpoint-medium) {  
 	body {font-size:round(($base-body-font-size * $breakpoint-medium-font-multiplier))}}
 @media(min-width:$breakpoint-large) { 
@@ -39,8 +108,18 @@ h1, h2, h3, h4, h5, h6 {
 	color: $base-heading-color;
 	text-transform: $base-heading-text-transform;
 	letter-spacing: $base-heading-letter-spacing}
-.fonts-loaded body h1, .fonts-loaded body h2 {font-family: $base-heading-font-family}
-.fonts-loaded body h3, .fonts-loaded body h4, .fonts-loaded body h5, .fonts-loaded body h6 {font-family: $base-heading-font-family-secondary;font-weight: $base-heading-font-weight-secondary;text-transform: $base-heading-text-transform-secondary}
+.fonts-loaded body h1, 
+.fonts-loaded body h2 {
+	font-family: $base-heading-font-family
+}
+.fonts-loaded body h3, 
+.fonts-loaded body h4, 
+.fonts-loaded body h5, 
+.fonts-loaded body h6 {
+	font-family: $base-heading-font-family-secondary;
+	font-weight: $base-heading-font-weight-secondary;
+	text-transform: $base-heading-text-transform-secondary
+}
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {margin-top: $base-heading-margin-top;}
 h1, .yd-h1 {font-size:  $base-h1-font-size;} 
 h2, .yd-h2 {font-size:  $base-h2-font-size;}
@@ -71,11 +150,10 @@ h4, .yd-h4 {font-size:  $base-h4-font-size;}
 .fonts-loaded body .yd-text-paragraph {font-family: $base-body-font-family;}
 
 /* Lists */
-ul, ol { padding-left: $base-list-padding-left; }
+ul, ol {list-style-type: none; padding-left: $base-list-padding-left; }
 ul > li > ul, ul > li > ol, ol > li > ol, ol > li > ul { margin: 0; }
 dt { font-weight: bold; }
 dd { margin-left: 0; }
-
 /* Horizontal rules */
 hr {/* normalize */ -moz-box-sizing: content-box;box-sizing: content-box;height: 0;
     /* style */ margin: $base-hr-margin-vertical 0;border: 0;border-top: $base-hr-border-width solid $base-hr-border;}
