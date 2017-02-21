@@ -52,8 +52,13 @@ compress_html:
 # Jekyll Assets
 # - https://jekyll.github.io/jekyll-assets/
 assets:
+  compress:
+    css: true 
+    js: true
+
   sources:
     - _assets/css
     - _assets/js
+  
   autoprefixer:
     browsers: ["last 2 versions","> 5%","IE 9"]
