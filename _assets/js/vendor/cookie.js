@@ -1,0 +1,2 @@
+/*! cookie function v0.1.3. get, set, or forget a cookie. [c]2014 @scottjehl, Filament Group, Inc. Licensed MIT */
+!function(e){var o=function(o,t,i){if(void 0===t){var n="; "+e.document.cookie,l=n.split("; "+o+"=");return 2===l.length?l.pop().split(";").shift():null}t===!1&&(i=-1);var u="";if(i){var d=new Date;d.setTime(d.getTime()+24*i*60*60*1e3),u="; expires="+d.toGMTString()}e.document.cookie=o+"="+t+u+"; path=/"};"undefined"!=typeof module?module.exports=o:e.cookie=o}("undefined"!=typeof global?global:this);
