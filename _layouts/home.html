@@ -47,18 +47,14 @@
 				<p>The images in the following list utilize deferred loading so they don't prevent the page from loading while they download. The script is located right before the end body tag.</p>
 				<ul>
 					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/3000x2000" alt="Image description"></li>
+							 width="{{ assets['bridge.jpg'].width  }}"
+							 height="{{ assets['bridge.jpg'].height  }}"
+							 data-src="{% asset_path bridge.jpg %}"></li>
 					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/3500x2333" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/2000x1333" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/3200x2133" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/2800x1866" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/2900x1933" alt="Image description"></li>	
-
+							 width="{{ assets['clouds.jpg'].width  }}"
+							 height="{{ assets['clouds.jpg'].height  }}"
+							 data-src="{% asset_path clouds.jpg %}" 
+							 alt="Image description"></li>
 				</ul>
 			</article>
 			<aside class="yd-sidebar">
@@ -67,18 +63,10 @@
 				<p>The aside content should be related to the surrounding content.</p>
 				<ul>
 					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/1500x1000" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/1750x1150" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/1000x652" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/1600x1000" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/1400x900" alt="Image description"></li>
-					<li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-							 data-src="http://unsplash.it/1459x900" alt="Image description"></li>	
-
+							 width="{{ assets['mountains.jpg'].width  }}"
+							 height="{{ assets['mountains.jpg'].height  }}"
+							 data-src="{% asset_path mountains.jpg %}" 
+							 alt="Image description"></li>
 				</ul>
 			</aside>
 		</section>
